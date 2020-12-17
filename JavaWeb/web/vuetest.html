@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vuetest</title>
+</head>
+<body>
+    <div id="pageBody">
+        <select v-model="provinceSelect" v-on:change="loadCity()" >
+            <option>请选择省份</option>
+            <option v-for="item in provinceList" v-bind:value="item.provinceCode">{{item.province}}</option>
+        </select>
+        <select>
+            <option>请选择城市</option>
+            <option v-for="item in cityList" v-bind:value="item.cityCode">{{item.city}}</option>
+        </select>
+    </div>
+
+
+</body>
+</html>
+
+<script src="/JavaWeb/js/vue.js"></script>
+<script src="/JavaWeb/js/jquery-3.5.0.min.js"></script>
+<script>
+    var mydata={
+        provinceList:[],
+        provinceSelect:"",
+        cityList:[]
+    };
+
+    var vue = new Vue({
+        el:"#pageBody",
+        data:mydata,
+        created(){
+            this.loadProvince()
+        },
+        methods:{
+            loadProvince(){
+                var _self = this;
+                $.ajax({
+                    type:"post",
+                    url:"controller/loadprovincecity.do",
+                    data:{},
+                    dataType:"json",
+                    success:function(response) {
+                        _self.provinceList = response;
+                    }
+                });
+            },
+
+            loadCity(){
+                var _self = this;
+                $.ajax({
+                    type:"post",
+                    url:"controller/loadprovincecity.do",
+                    data:"provinceCode="+_self.provinceSelect,
+                    dataType:"json",
+                    success:function(response) {
+                        _self.cityList = response;
+                    }
+                });
+            }
+        }
+    });
+</script>

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.downloadList{
+    height: 130px;
+    width: 60%;
+    border: solid;
+    margin: 20px 200px;
+    background: white;
+}
+
+.downloadList_title{
+   margin: 0 0 0 10px;
+    font-size: 25px;
+    font-family: KaiTI;
+    font-weight: bold;
+}
+
+.downloadList_img{
+    height: 80px;
+    width: 60px;
+    float: left;
+    margin-left: 10px;
+}
+
+.downloadList_info{
+    display: inline;
+    margin: 0 20px 0 15px;
+}
+
+.downloadList_description{
+    margin: 5px 0 15px 85px;
+    font-size: 15px;
+    width: 650px;
+    height: auto;
+}
+
+.downloadList_button{
+    display: block;
+    height: 50px;
+    width: 150px;
+    float: right;
+    font-size: 30px;
+    margin: -20px 40px;
+    background: linear-gradient(to top,grey,transparent);
+    border: solid 2px grey;
+    text-align: center;
+}
+
+#star_div{
+    background-image: url("../image/star.jpg");
+    display: block;
+    width: 150px;
+    height: 30px;
+    border: solid 1px transparent;
+    margin: -25px 0 0 530px;
+}

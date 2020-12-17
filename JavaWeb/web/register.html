@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link type="text/css" rel="stylesheet" href="/JavaWeb/css/register_page.css">
+    <script type="text/javascript" src="/JavaWeb/js/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+    <div id="main_div">
+        <h1 id="welcome">账号注册</h1>
+        <p><input type="text" placeholder="用户名" id="userName"/>                  <span class="warnInfo" id="userNameWarnInfo"></span></p>
+        <p><input type="text" placeholder="真实姓名" id="realName"/>                <span class="warnInfo" id="realNameWarnInfo"></span></p>
+        <p><input type="text" placeholder="邮箱" id="email"/>                      <span class="warnInfo" id="emailWarnInfo"></span></p>
+        <p><select id="provinces" ></select>                           <span class="warnInfo" id="provincesWarnInfo"></span></p>
+        <p><select id="citys"></select>                                   <span class="warnInfo" id="citysWarnInfo"></span></p>
+        <p><input type="password" placeholder="密码" id="password"/>               <span class="warnInfo" id="passwordWarnInfo"></span></p>
+        <p><input type="password" placeholder="确认密码" id="confirmPassword"/>    <span class="warnInfo" id="confirmPasswordWarnInfo"></span></p>
+        <p id="registerButton">注册</p> <span id="buttonWarnInfo"></span>
+        <p id="alreadyRegister" onclick="location.href='/JavaWeb/login.html'">已有账号，直接登录</p>
+    </div>
+    <script type="text/javascript" src="/JavaWeb/js/register_page.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="/JavaWeb/css/login_page.css">
+    <script type="text/javascript" src="/JavaWeb/js/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+    <div id="bg">
+        <div id="main_div">
+            <h1 id="welcome">欢迎来到登录界面</h1>
+            <p><input type="text" id="userName" placeholder="用户名"/></p>
+            <p><input type="password" name="password" id="password" placeholder="密码"/></p>
+            <p id="verify_p">
+                <input type="text" id="vcode" placeholder="验证码"/>
+                <img src="controller/createvcode.do" onclick="changeVcode()" title="看不清，换一张" id="verifyCode" >
+            </p>
+            <input type="checkbox" id="autoLogin"><span>一周之内免登录</span>
+            <span id="register">免费注册</span>
+            <button id="submitButton">立即登录</button><br>
+            <span id="checkError"></span>
+
+
+        </div>
+    </div>
+    <script type="text/javascript" src="/JavaWeb/js/login_page.js"></script>
+</body>
+</html>

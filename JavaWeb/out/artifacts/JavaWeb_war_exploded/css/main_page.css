@@ -1,0 +1,7 @@
+#bodyer{
+    background: url("../image/main_body_pic.jpg") no-repeat;
+    width: 80%;
+    height: 400px;
+    margin: 50px 0 50px 150px;
+    background-size: 100% 100%;
+}
